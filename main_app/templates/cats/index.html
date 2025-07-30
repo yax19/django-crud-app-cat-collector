@@ -27,6 +27,7 @@
 
 <section class="card-container">
   {% for cat in cats %}
+ <a href="{% url 'cat-detail' cat.id %}">
   <div class="card">
      <a href="/cats/{{ cat.id }}"></a>
     <div class="card-content">
@@ -36,6 +37,7 @@
           alt="A skater boy cat"
         />
       </div>
+      </a>
       <h2 class="card-title">{{ cat.name }}</h2>
       {% if cat.age > 0 %}
       <p>A {{ cat.age }} year old {{ cat.breed }}</p>
